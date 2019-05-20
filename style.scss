@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+$color-primary: #088488; // blue
+$color-secundary: #e918aa; // pink
+$color-tertiary: #ffffff; // white
+$color-text-dark: #333; //gray
+
+$width-button: 150px;
+
+nav {
+    margin: 30px;
+    background-color: $color-primary;
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .navigation {
+      list-style: none;
+      float: left;
+
+      li {
+        display: inline-block;
+        margin-left: 3rem;
+
+         
+          &:first-child {
+            margin: 0;
+          }
+
+
+          a:link {
+            color: $color-tertiary;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+      }
+    }
+}
+
+.buttons {
+  float: right;
+}
+
+.btn-main:link,
+.btn-hot:link {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: $width-button;
+  color: $color-tertiary;
+}
+
+.btn-main {
+  &:link {
+    background-color: $color-secundary;
+  }
+  &:hover {
+    background-color: darken($color-secundary, 10%);
+  }
+}
+
+.btn-hot {
+  &:link {
+    background-color: $color-text-dark;
+  }
+  &:hover {
+    background-color: lighten($color-text-dark, 10%);
+  }
+}
